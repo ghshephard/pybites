@@ -1,6 +1,6 @@
 def magic_tuples(tsum, tmax):
-    return ((x, y) for x in range(1, tmax) for y in range(1, tmax) if (x + y) == tsum)
-
+    return ( (x, tsum - x) 
+    for x in range(  tsum - tmax +1 , tmax))
 
 if __name__ == "__main__":
-    print(list(magic_tuples(5, 4)))
+    print(list(magic_tuples(500, 255)))
